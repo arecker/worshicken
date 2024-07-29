@@ -1,0 +1,36 @@
+{% extends '_base.html' %}
+{% block content %}
+<h2>Edit Profile</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit">Update</button>
+</form>
+<h2>Upcoming Breaks  (<a href="{% url 'break-new' %}">+ new</a>)</h2>
+<em>Request a break.  Breaks block you from being added to upcoming sets</em>
+<table>
+  <tr>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Reason</th>
+    <th>Action</th>
+  </tr>
+  {% for break in breaks %}
+  <tr>
+    <td>
+      {{ break.start | date:'l, F j Y' }}
+    </td>
+    <td>
+      {{ break.end | date:'l, F j Y' }}
+    </td>
+    <td>
+      {{ break.reason }}
+    </td>
+    <td>
+      <a href="{% url 'break-delete' pk=break.id %}">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

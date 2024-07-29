@@ -1,0 +1,161 @@
+body {
+    font-family: Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 900px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav a, header h1 {
+    text-transform: uppercase;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+nav a:nth-of-type(1) {
+    padding-left: 0px
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+    padding-left: 0px;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+figure {
+    margin-left: 0;
+}
+
+figure img, video {
+    max-height: 500px;
+    max-width: 500px;
+}
+
+figure figcaption {
+    font-style: italic;
+    color: grey;
+}
+
+figure figcaption p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+blockquote {
+    margin-left: 0;
+    font-style: italic;
+    color: grey;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+td {
+    padding-right: 10px;
+}
+
+table {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.5em;
+}
+
+nav:nth-of-type(2) a {
+    margin-right: 20px;
+}
+
+footer p, footer a {
+    font-size: 15px;
+    margin: 0;
+}
+
+figure.small a img {
+    max-width: 200px;
+}
+
+figure.small figcaption {
+    max-width: 200px;
+}
+
+.column {
+    float: left;
+    max-width: 400px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+form p {
+    display: table-row;
+}
+form p label {
+    display: table-cell;
+    padding-right: 5px;
+}
+form p input {
+    display: table-cell;
+}
+form button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+form div {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+ul.errorlist {
+    max-width: 15em;
+    list-style-type: none;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    color: red;
+}
+
+ul {
+    padding-left: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+  figure img, video {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+{% extends '_base.html' %}
+{% block content %}
+<h2>Instruments (<a href="{% url 'instrument-new' %}">+ new</a>)</h2>
+<table>
+  <tr>
+    <th>Instrument</th>
+    <th>Musicians</th>
+    <th>Action</th>
+  </th>
+  {% for object in instruments %}
+  <tr>
+    <td>
+      <a href="{% url 'instrument-detail' pk=object.id %}">{{ object.name }}</a>
+    </td>
+    <td>
+      {{ object.musicians.all | length }}
+    </td>
+    <td>
+      <a href="{% url 'instrument-delete' pk=object.id %}">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

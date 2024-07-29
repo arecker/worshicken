@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+{% block content %}
+<h2>Songs (<a href="{% url 'song-new' %}">+ new</a>)</h2>
+<em>Maintain the song bank.  Each song can have multiple charts in specific keys or just number notation ("#").</em>
+<table>
+  <tr>
+    <th>Song Title</th>
+    <th>Charts</th>
+    <th>Action</th>
+  </tr>
+  {% for song in songs %}
+  <tr>
+    <td><a href="{% url 'song-detail' pk=song.pk %}">{{ song }}</a></td>
+    <td>
+      {% for chart in song.charts.all %}
+      <a href="{{ chart.file.url }}">{{ chart }}</a>{% if not forloop.last %}, {% endif %}
+      {% empty %}
+      {% endfor %}
+    </td>
+    <td>
+      <a href="{% url 'song-delete' pk=song.pk %}">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

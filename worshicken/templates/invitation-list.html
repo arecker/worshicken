@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% block content %}
+<h2>Invitations (<a href="{% url 'invitation-detail' %}">+ new</a>)</h2>
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Accepted</th>
+    <th>Action</th>
+  </tr>
+  {% for invite in invitations %}
+  <tr>
+    <td>{{ invite.email }}</td>
+    <td>{% if invite.is_active %}No{% else %}Yes{% endif %}</td>
+    <td>
+      {% if invite.is_active %}
+      <a href="{% url 'invitation-delete' pk=invite.id %}">Delete</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

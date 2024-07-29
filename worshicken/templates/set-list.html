@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+{% block content %}
+<h2>Upcoming Sets</h2>
+<h2>Set Templates (<a href="{% url 'set-template-new' %}">+ new</a>)</h2>
+<p>Manage your own combinations of instruments</p>
+<table>
+  <tr>
+    <th>Set Template Name</th>
+    <th>Insruments</th>
+    <th>Action</th>
+  </tr>
+  {% for template in templates %}
+  <tr>
+    <td><a href="{% url 'set-template-detail' pk=template.pk %}">{{ template.name }}</a></td>
+    <td>
+      {% for instrument in template.instruments.all %}
+      {{ instrument }}{% if not forloop.last %}, {% endif %}
+      {% empty %}
+      {% endfor %}
+    </td>
+    <td>
+      <a href="{% url 'set-template-delete' pk=template.pk %}">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

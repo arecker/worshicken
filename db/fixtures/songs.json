@@ -1,0 +1,138 @@
+[
+  {
+    "model": "db.song",
+    "pk": "ec65b2a7-fc82-4f00-9b03-56154882a7bd",
+    "fields": {
+      "title": "Worthy Of It All"
+    }
+  },
+  {
+    "model": "db.songchart",
+    "pk": "bf012345-6789-4abc-def0-1234567890ab",
+    "fields": {
+      "song": "ec65b2a7-fc82-4f00-9b03-56154882a7bd",
+      "key": "b",
+      "pitch": "f",
+      "file": "charts/Worthy_Of_It_All-chords-Bb.pdf"
+    }
+  },
+  {
+    "model": "db.song",
+    "pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "fields": {
+      "title": "All Is For Your Glory"
+    }
+  },
+  {
+    "model": "db.songchart",
+    "pk": "c1d2e3f4-0000-4000-8000-000000000000",
+    "fields": {
+      "song": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+      "key": "a",
+      "pitch": "f",
+      "file": "charts/All_Is_For_Your_Glory-chords-Ab.pdf"
+    }
+  },
+  {
+    "model": "db.song",
+    "pk": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+    "fields": {
+      "title": "Better Is One Day"
+    }
+  },
+  {
+    "model": "db.songchart",
+    "pk": "d3e4f5a6-0000-4000-8000-000000000000",
+    "fields": {
+      "song": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+      "key": "g",
+      "pitch": "",
+      "file": "charts/Better_Is_One_Day-chords-G.pdf"
+    }
+  },
+  {
+    "model": "db.song",
+    "pk": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+    "fields": {
+      "title": "Build My Life"
+    }
+  },
+  {
+    "model": "db.songchart",
+    "pk": "e4f5a6b7-0000-4000-8000-000000000000",
+    "fields": {
+      "song": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+      "key": "g",
+      "pitch": "",
+      "file": "charts/Build_My_Life-chords-G.pdf"
+    }
+  },
+  {
+    "model": "db.song",
+    "pk": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+    "fields": {
+      "title": "Fall Like Rain"
+    }
+  },
+  {
+    "model": "db.songchart",
+    "pk": "f5a6b7c8-0000-4000-8000-000000000000",
+    "fields": {
+      "song": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+      "key": "d",
+      "pitch": "",
+      "file": "charts/Fall_Like_Rain-chords-D.pdf"
+    }
+  },
+  {
+    "model": "db.song",
+    "pk": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b",
+    "fields": {
+      "title": "Forever (We Sing Hallelujah)"
+    }
+  },
+  {
+    "model": "db.songchart",
+    "pk": "a6b7c8d9-0000-4000-8000-000000000000",
+    "fields": {
+      "song": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b",
+      "key": "g",
+      "pitch": "",
+      "file": "charts/Forever_(We_Sing_Hallelujah)-chords-G.pdf"
+    }
+  },
+  {
+    "model": "db.song",
+    "pk": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c",
+    "fields": {
+      "title": "Good Good Father"
+    }
+  },
+  {
+    "model": "db.songchart",
+    "pk": "b7c8d9a0-0000-4000-8000-000000000000",
+    "fields": {
+      "song": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c",
+      "key": "g",
+      "pitch": "",
+      "file": "charts/Good_Good_Father-chords-G.pdf"
+    }
+  },
+  {
+    "model": "db.song",
+    "pk": "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d",
+    "fields": {
+      "title": "Take Courage"
+    }
+  },
+  {
+    "model": "db.songchart",
+    "pk": "c8d9a0b1-0000-4000-8000-000000000000",
+    "fields": {
+      "song": "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d",
+      "key": "f",
+      "pitch": "",
+      "file": "charts/Take_Courage-chords-F.pdf"
+    }
+  }
+]
