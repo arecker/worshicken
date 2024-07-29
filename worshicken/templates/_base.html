@@ -1,0 +1,45 @@
+<!doctype html>{% load static %}
+<html>
+  <head>
+    <title>worshicken</title>
+    <link href="{% static 'favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
+    <link href="{% static 'site.css' %}" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+  <body>
+    <article id="top">
+      <header>
+        <h1>New Day EM</h1>
+      </header>
+      <nav>
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Logout</a>
+        <span>|</span>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'user-list' %}">Members</a>
+        <a href="{% url 'song-list' %}">Songs</a>
+        <a href="{% url 'invitation-list' %}">Invitations</a>
+        <a href="{% url 'instrument-list' %}">Instruments</a>
+        {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'register' %}">Register</a>
+        {% endif %}
+      </nav>
+      <hr />
+      <div class="row">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <hr />
+      <footer>
+        {% if user.is_authenticated %}
+        <p>Logged in as <a href="{% url 'user-detail' pk=user.pk %}">{{ user.get_username }}</a></p>
+        {% endif %}
+        <p>
+          🐔 <a href="https://www.github.com/arecker/worshicken">v0.0.0</a>
+        </p>
+      </footer>
+    </article>
+  </body>
+</html>

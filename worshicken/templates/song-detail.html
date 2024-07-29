@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <hr/>
+  {{ formset }}
+  <button type="submit">
+    {% if object %}
+    Update
+    {% else %}
+    Create
+    {% endif %}
+  </button>
+</form>
+{% endblock %}

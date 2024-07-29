@@ -1,0 +1,61 @@
+[
+  {
+    "model": "db.instrument",
+    "pk": null,
+    "fields": {
+      "name": "Drums",
+      "musicians": [
+      ]
+    }
+  },
+  {
+    "model": "db.instrument",
+    "pk": null,
+    "fields": {
+      "name": "Keys",
+      "musicians": []
+    }
+  },
+  {
+    "model": "db.instrument",
+    "pk": null,
+    "fields": {
+      "name": "Bass",
+      "musicians": []
+    }
+  },
+  {
+    "model": "db.instrument",
+    "pk": null,
+    "fields": {
+      "name": "Electric Guitar",
+      "musicians": []
+    }
+  },
+  {
+    "model": "db.instrument",
+    "pk": null,
+    "fields": {
+      "name": "Acoustic Guitar",
+      "musicians": []
+    }
+  },
+  {
+    "model": "db.instrument",
+    "pk": null,
+    "fields": {
+      "name": "Djembe",
+      "musicians": [
+      ]
+    }
+  },
+  {
+    "model": "db.instrument",
+    "pk": null,
+    "fields": {
+      "name": "Cajon",
+      "musicians": [
+      ]
+    }
+  }
+]

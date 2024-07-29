@@ -1,0 +1,28 @@
+{% extends '_base.html' %}
+{% block content %}
+<h2>Members</h2>
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Korean Name</th>
+    <th>Instruments</th>
+  </tr>
+  {% for member in users %}
+  <tr>
+    <td>
+      {% if user.is_superuser or user == member %}
+      <a href="{% url 'user-detail' pk=member.id %}">{{ member.email }}</a>
+      {% else %}
+      {{ member.email }}
+      {% endif %}
+    </td>
+    <td>{{ member.last_name }}</td>
+    <td>{{ member.first_name }}</td>
+    <td>{{ member.korean_name }}</td>
+    <td>{{ member.instruments.all | length }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

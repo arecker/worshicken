@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+{% block content %}
+<h2>Songs (<a href="{% url 'song-new' %}">+ new</a>)</h2>
+<table>
+  <tr>
+    <th>Song Title</th>
+    <th>Keys</th>
+  </tr>
+  {% for song in object_list %}
+  <tr>
+    <td><a href="{% url 'song-detail' pk=song.id %}">{{ song.title }}</a></td>
+    <td>{{ song.song_charts }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

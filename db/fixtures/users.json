@@ -1,0 +1,12 @@
+[
+    {
+        "model": "db.User",
+        "pk": null,
+        "fields": {
+            "email": "alex@reckerfamily.com",
+            "first_name": "Alex",
+            "last_name": "Recker",
+            "is_superuser": "True"
+        }
+    }
+]
