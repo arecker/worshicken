@@ -1,0 +1,38 @@
+{% extends "_base.html" %}
+{% block content %}
+<h1>Invitations</h1>
+<p>Invitations for users to register as members.</p>
+<p>
+  <a href="{% url 'invitation-create' %}">Create New Invitation</a>
+</p>
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Date Invited</th>
+    <th>Invite Status</th>
+    <th>Date Accepted</th>
+    <th>Action</th>
+  </tr>
+  {% for invitation in object_list %}
+  <tr>
+    <td>{{ invitation.email }}</td>
+    <td>{{ invitation.created | date }}</td>
+    {% if invitation.is_accepted %}
+    <td>Accepted</td>
+    {% else %}
+    <td>Pending</td>
+    {% endif %}
+    <td>
+      {% if invitation.is_accepted %}
+      {{ invitation.accepted | date }}
+      {% endif %}
+    </td>
+    <td>
+      {% if not invitation.is_accepted %}
+      <a href="{% url 'invitation-delete' invitation.pk %}">Delete</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

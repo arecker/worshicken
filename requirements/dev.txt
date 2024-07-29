@@ -1,0 +1,2 @@
+-r prod.txt
+python-lsp-server[all]

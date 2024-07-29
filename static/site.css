@@ -1,0 +1,27 @@
+body {
+    margin: 2em;
+}
+
+body, nav, hr {
+    margin-bottom: 1em;
+}
+
+nav > a, nav > img, nav > span, nav input {
+    margin-right: 1em;
+    vertical-align:middle;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+form input {
+    margin-bottom: 0.5em;
+}
+
+table, tr, td, th {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 5px;
+}

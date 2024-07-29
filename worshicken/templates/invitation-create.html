@@ -1,0 +1,10 @@
+{% extends "_base.html" %}
+{% block content %}
+<h1>Profile</h1>
+<p>Create a new invitation.</p>
+<form action="{% url 'invitation-create' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Send Invitation">
+</form>
+{% endblock %}
